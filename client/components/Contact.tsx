@@ -125,7 +125,7 @@ export function Contact() {
                   <Code2 className="w-8 h-8 text-white" />
                 </div>
                 <blockquote className="text-xl text-minimal-text mb-4 leading-relaxed clean-font">
-                  "Code is poetry written in logic, design is art painted with purpose."
+                  "Learning never stops, growing never ends."
                 </blockquote>
                 <cite className="text-sm text-minimal-text-light mono-font">
                   — Wesley Belmonte
