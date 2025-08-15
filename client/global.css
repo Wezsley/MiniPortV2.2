@@ -9,66 +9,47 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    /* Professional dark theme for light mode */
-    --background: 220 15% 8%;
-    --foreground: 120 80% 85%;
+    /* Minimalist light theme */
+    --background: 0 0% 99%;
+    --foreground: 240 10% 15%;
 
-    --card: 220 15% 10%;
-    --card-foreground: 120 80% 85%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
 
-    --popover: 220 15% 10%;
-    --popover-foreground: 120 80% 85%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
 
-    --primary: 120 100% 45%;
-    --primary-foreground: 220 15% 8%;
+    --primary: 240 100% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 12%;
-    --secondary-foreground: 120 80% 85%;
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 15%;
 
-    --muted: 220 15% 12%;
-    --muted-foreground: 120 40% 65%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
 
-    --accent: 120 100% 45%;
-    --accent-foreground: 220 15% 8%;
+    --accent: 240 100% 60%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 100% 50%;
-    --destructive-foreground: 220 15% 8%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 120 30% 20%;
-    --input: 220 15% 12%;
-    --ring: 120 100% 45%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 240 100% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 220 15% 8%;
-    --sidebar-foreground: 120 80% 85%;
-    --sidebar-primary: 120 100% 45%;
-    --sidebar-primary-foreground: 220 15% 8%;
-    --sidebar-accent: 220 15% 12%;
-    --sidebar-accent-foreground: 120 80% 85%;
-    --sidebar-border: 120 30% 20%;
-    --sidebar-ring: 120 100% 45%;
-
-    /* Enhanced hacker/cyberpunk theme variables */
-    --cyber-primary: 120 100% 45%;
-    --cyber-secondary: 180 100% 40%;
-    --cyber-accent: 200 100% 50%;
-    --cyber-glow: 120 100% 45%;
-    --cyber-dark: 220 15% 3%;
-    --cyber-darker: 220 15% 1%;
-    --cyber-grid: 120 60% 25%;
-
-    /* Matrix green colors */
-    --matrix-green: 120 100% 45%;
-    --matrix-green-bright: 120 100% 60%;
-    --matrix-green-dim: 120 60% 30%;
-
-    /* Terminal colors */
-    --terminal-black: 220 15% 5%;
-    --terminal-green: 120 100% 45%;
-    --terminal-blue: 200 100% 50%;
-    --terminal-purple: 280 100% 60%;
-    --terminal-orange: 30 100% 50%;
+    /* Minimalist design tokens */
+    --minimal-primary: 240 100% 60%;
+    --minimal-secondary: 280 100% 70%;
+    --minimal-accent: 200 100% 50%;
+    --minimal-surface: 0 0% 98%;
+    --minimal-surface-hover: 240 5% 96%;
+    --minimal-text: 240 10% 15%;
+    --minimal-text-light: 240 4% 46%;
+    --minimal-border: 240 6% 90%;
+    --minimal-shadow: 240 10% 3%;
   }
 
   .dark {
