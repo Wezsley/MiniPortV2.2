@@ -57,27 +57,17 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Hacker/Cyberpunk theme colors
-        cyber: {
-          primary: "hsl(var(--cyber-primary))",
-          secondary: "hsl(var(--cyber-secondary))",
-          accent: "hsl(var(--cyber-accent))",
-          glow: "hsl(var(--cyber-glow))",
-          dark: "hsl(var(--cyber-dark))",
-          darker: "hsl(var(--cyber-darker))",
-          grid: "hsl(var(--cyber-grid))",
-        },
-        matrix: {
-          green: "hsl(var(--matrix-green))",
-          "green-bright": "hsl(var(--matrix-green-bright))",
-          "green-dim": "hsl(var(--matrix-green-dim))",
-        },
-        terminal: {
-          black: "hsl(var(--terminal-black))",
-          green: "hsl(var(--terminal-green))",
-          blue: "hsl(var(--terminal-blue))",
-          purple: "hsl(var(--terminal-purple))",
-          orange: "hsl(var(--terminal-orange))",
+        // Minimalist theme colors
+        minimal: {
+          primary: "hsl(var(--minimal-primary))",
+          secondary: "hsl(var(--minimal-secondary))",
+          accent: "hsl(var(--minimal-accent))",
+          surface: "hsl(var(--minimal-surface))",
+          "surface-hover": "hsl(var(--minimal-surface-hover))",
+          text: "hsl(var(--minimal-text))",
+          "text-light": "hsl(var(--minimal-text-light))",
+          border: "hsl(var(--minimal-border))",
+          shadow: "hsl(var(--minimal-shadow))",
         },
       },
       borderRadius: {
