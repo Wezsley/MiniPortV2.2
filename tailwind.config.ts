@@ -102,10 +102,83 @@ export default {
             height: "0",
           },
         },
+        "glow-pulse": {
+          "0%, 100%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+          "50%": {
+            opacity: "0.8",
+            transform: "scale(1.05)",
+          },
+        },
+        "matrix-rain": {
+          "0%": {
+            transform: "translateY(-100vh)",
+            opacity: "0",
+          },
+          "10%": {
+            opacity: "1",
+          },
+          "90%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translateY(100vh)",
+            opacity: "0",
+          },
+        },
+        "typing": {
+          "0%": {
+            width: "0ch",
+          },
+          "100%": {
+            width: "var(--typing-width, 20ch)",
+          },
+        },
+        "glitch": {
+          "0%, 100%": {
+            transform: "translate(0)",
+          },
+          "20%": {
+            transform: "translate(-2px, 2px)",
+          },
+          "40%": {
+            transform: "translate(-2px, -2px)",
+          },
+          "60%": {
+            transform: "translate(2px, 2px)",
+          },
+          "80%": {
+            transform: "translate(2px, -2px)",
+          },
+        },
+        "scan-line": {
+          "0%": {
+            transform: "translateX(-100%)",
+          },
+          "100%": {
+            transform: "translateX(100%)",
+          },
+        },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(-20px)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
+        "matrix-rain": "matrix-rain 3s linear infinite",
+        "typing": "typing 3s steps(var(--typing-steps, 20)) infinite",
+        "glitch": "glitch 0.3s ease-in-out infinite",
+        "scan-line": "scan-line 2s linear infinite",
+        "float": "float 6s ease-in-out infinite",
       },
     },
   },
