@@ -15,12 +15,17 @@ export function Navigation() {
 
   useEffect(() => {
     const root = window.document.documentElement;
-    root.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
-  }, []);
+    if (isDark) {
+      root.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      root.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [isDark]);
 
   const toggleTheme = () => {
-    // Theme locked to dark mode for hacker aesthetic
+    setIsDark(!isDark);
   };
 
   const navItems = [
