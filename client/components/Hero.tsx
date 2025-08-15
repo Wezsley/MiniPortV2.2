@@ -60,29 +60,28 @@ export function Hero() {
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Profile Image */}
           <div className="relative mx-auto w-48 h-48 md:w-64 md:h-64">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyber-primary to-cyber-secondary p-1 animate-spin">
-              <div className="w-full h-full rounded-full bg-background p-2">
+            {/* Static hexagonal frame */}
+            <div className="absolute inset-0 rounded-full border-2 border-cyber-primary/60 p-1 glow-border">
+              <div className="w-full h-full rounded-full bg-cyber-dark/20 backdrop-blur-sm p-2 border border-cyber-primary/30">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F9fd4460e1a834f8db87a79c9f69f8604%2Fe2cf993ac0204451bd9a2c42f8e14e9a?format=webp&width=800"
                   alt="Wesley Belmonte"
-                  className="w-full h-full rounded-full object-cover"
+                  className="w-full h-full rounded-full object-cover filter brightness-110 contrast-110"
                 />
               </div>
             </div>
-            {/* Floating particles around image */}
-            <div className="absolute -inset-4">
-              {[...Array(8)].map((_, i) => (
-                <div
-                  key={i}
-                  className="absolute w-2 h-2 bg-cyber-primary rounded-full animate-float opacity-60"
-                  style={{
-                    top: `${Math.random() * 100}%`,
-                    left: `${Math.random() * 100}%`,
-                    animationDelay: `${i * 0.5}s`
-                  }}
-                />
-              ))}
-            </div>
+
+            {/* Corner brackets for cyber aesthetic */}
+            <div className="absolute -top-2 -left-2 w-6 h-6 border-l-2 border-t-2 border-cyber-primary" />
+            <div className="absolute -top-2 -right-2 w-6 h-6 border-r-2 border-t-2 border-cyber-primary" />
+            <div className="absolute -bottom-2 -left-2 w-6 h-6 border-l-2 border-b-2 border-cyber-primary" />
+            <div className="absolute -bottom-2 -right-2 w-6 h-6 border-r-2 border-b-2 border-cyber-primary" />
+
+            {/* Subtle pulse effect on corners */}
+            <div className="absolute -top-1 -left-1 w-2 h-2 bg-cyber-primary rounded-full animate-pulse opacity-80" />
+            <div className="absolute -top-1 -right-1 w-2 h-2 bg-cyber-primary rounded-full animate-pulse opacity-80" style={{ animationDelay: '0.5s' }} />
+            <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-cyber-primary rounded-full animate-pulse opacity-80" style={{ animationDelay: '1s' }} />
+            <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-cyber-primary rounded-full animate-pulse opacity-80" style={{ animationDelay: '1.5s' }} />
           </div>
 
           {/* Name with typing effect */}
