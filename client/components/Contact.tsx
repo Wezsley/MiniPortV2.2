@@ -162,8 +162,8 @@ export function Contact() {
                   key={social.name}
                   onClick={() => handleSocialClick(social.url)}
                   className={cn(
-                    "group p-6 border border-cyber-primary/30 rounded-lg bg-background/20 backdrop-blur-sm",
-                    "hover:border-cyber-primary/60 transition-all duration-300 hover:scale-105",
+                    "group p-6 hacker-border cyber-glass data-stream",
+                    "hover:border-cyber-primary/80 transition-all duration-300 hover:scale-[1.02]",
                     "relative overflow-hidden"
                   )}
                   style={{ animationDelay: `${index * 0.1}s` }}
