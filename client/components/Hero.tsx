@@ -132,15 +132,28 @@ export function Hero() {
           </div>
 
           {/* Scroll indicator */}
-          <div className="flex flex-col items-center space-y-2 pt-12">
-            <span className="text-sm text-muted-foreground terminal-font animate-pulse">
-              scroll_down()
+          <div className="flex flex-col items-center space-y-4 pt-12">
+            <span className="text-sm text-muted-foreground terminal-font">
+              <span className="text-cyber-secondary">&gt;</span> scroll_down<span className="animate-pulse text-cyber-primary">|</span>
             </span>
             <button
               onClick={scrollToAbout}
-              className="p-2 rounded-full border border-cyber-primary/30 hover:border-cyber-primary hover:bg-cyber-primary/10 transition-all duration-300 animate-bounce"
+              className={cn(
+                "group relative p-3 border border-cyber-primary/40 bg-cyber-dark/20 backdrop-blur-sm",
+                "hover:border-cyber-primary hover:bg-cyber-primary/10 transition-all duration-300",
+                "before:absolute before:inset-0 before:border before:border-cyber-primary/60",
+                "before:scale-0 before:transition-transform before:duration-300",
+                "hover:before:scale-100 glow-border"
+              )}
             >
-              <ChevronDown className="w-5 h-5 text-cyber-primary" />
+              <ChevronDown className="w-5 h-5 text-cyber-primary group-hover:translate-y-1 transition-transform duration-300" />
+
+              {/* Animated arrow indicators */}
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col space-y-1 opacity-50">
+                <div className="w-1 h-1 bg-cyber-primary rounded-full animate-pulse" />
+                <div className="w-1 h-1 bg-cyber-primary rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} />
+                <div className="w-1 h-1 bg-cyber-primary rounded-full animate-pulse" style={{ animationDelay: '0.4s' }} />
+              </div>
             </button>
           </div>
         </div>
