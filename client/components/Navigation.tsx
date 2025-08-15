@@ -68,14 +68,20 @@ export function Navigation() {
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
                 className={cn(
-                  "relative px-3 py-2 text-sm font-medium transition-all duration-300",
-                  "hover:text-cyber-primary hover:glow-text",
-                  "before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5",
-                  "before:bg-cyber-primary before:transition-all before:duration-300",
-                  "hover:before:w-full terminal-font"
+                  "relative px-4 py-2 text-sm font-medium transition-all duration-300 group",
+                  "hover:text-cyber-primary terminal-font overflow-hidden",
+                  "border border-transparent hover:border-cyber-primary/30",
+                  "before:absolute before:inset-0 before:bg-cyber-primary/10",
+                  "before:translate-x-[-100%] before:transition-transform before:duration-300",
+                  "hover:before:translate-x-0"
                 )}
               >
-                <span className="relative z-10">{item.name}</span>
+                <span className="relative z-10 flex items-center space-x-1">
+                  <span>&gt;</span>
+                  <span>{item.name}</span>
+                </span>
+                {/* Glitch effect on hover */}
+                <div className="absolute inset-0 bg-cyber-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
               </button>
             ))}
           </div>
