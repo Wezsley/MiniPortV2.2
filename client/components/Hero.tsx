@@ -26,23 +26,40 @@ export function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden minimal-bg">
-      {/* Minimalist background with scenic image */}
+      {/* Enhanced background with scenic image and animations */}
       <div className="absolute inset-0 z-0">
-        <div 
-          className="absolute inset-0 opacity-30 bg-cover bg-center bg-no-repeat"
+        <div
+          className="absolute inset-0 opacity-22 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
           style={{
             backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F9fd4460e1a834f8db87a79c9f69f8604%2F2fc2302300a447a8a8f1682bc6cb179a?format=webp&width=800')`
           }}
         />
-        {/* Subtle overlay */}
+        {/* Subtle animated overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/60" />
-        
-        {/* Floating geometric shapes */}
+
+        {/* Enhanced floating elements with more animations */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-minimal-primary/20 rounded-full animate-pulse" />
-          <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-minimal-secondary/15 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="absolute top-1/2 left-3/4 w-1 h-1 bg-minimal-accent/25 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+          {/* Geometric shapes */}
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-minimal-primary/20 rounded-full animate-float-gentle" />
+          <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-minimal-secondary/15 rounded-full animate-float-gentle" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-1/2 left-3/4 w-1 h-1 bg-minimal-accent/25 rounded-full animate-float-gentle" style={{ animationDelay: '2s' }} />
+
+          {/* Additional floating particles */}
+          <div className="absolute top-1/6 right-1/3 w-1.5 h-1.5 bg-minimal-primary/15 rounded-full animate-gentle-bounce" style={{ animationDelay: '0.5s' }} />
+          <div className="absolute bottom-1/4 left-1/6 w-2 h-2 bg-minimal-secondary/10 rounded-full animate-gentle-bounce" style={{ animationDelay: '1.5s' }} />
+          <div className="absolute top-2/3 right-1/6 w-1 h-1 bg-minimal-accent/20 rounded-full animate-gentle-bounce" style={{ animationDelay: '2.5s' }} />
+
+          {/* Subtle moving gradients */}
+          <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-radial from-minimal-primary/5 to-transparent rounded-full animate-float-gentle" style={{ animationDelay: '3s' }} />
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-radial from-minimal-secondary/3 to-transparent rounded-full animate-float-gentle" style={{ animationDelay: '4s' }} />
+
+          {/* Animated light rays */}
+          <div className="absolute top-1/3 left-0 w-px h-24 bg-gradient-to-b from-transparent via-minimal-primary/20 to-transparent rotate-12 animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute bottom-1/3 right-0 w-px h-32 bg-gradient-to-b from-transparent via-minimal-secondary/15 to-transparent -rotate-12 animate-pulse" style={{ animationDelay: '2s' }} />
         </div>
+
+        {/* Subtle overlay animation */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-minimal-primary/2 to-transparent animate-pulse" style={{ animationDelay: '5s' }} />
       </div>
 
       {/* Main content */}
