@@ -29,7 +29,8 @@ export function Hero() {
       {/* Enhanced background with scenic image and animations */}
       <div className="absolute inset-0 z-0">
         <div
-          className="absolute inset-0 opacity-22 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
+          style={{ opacity: 0.22 }}
           style={{
             backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F9fd4460e1a834f8db87a79c9f69f8604%2F2fc2302300a447a8a8f1682bc6cb179a?format=webp&width=800')`
           }}
