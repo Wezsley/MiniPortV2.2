@@ -140,15 +140,29 @@ export function About() {
                 </div>
               </div>
 
-              {/* Motto card */}
-              <div className="minimal-card p-8 text-center hover-lift">
-                <div className="space-y-4">
-                  <h4 className="text-lg font-medium text-minimal-text clean-font">Life Motto</h4>
-                  <blockquote className="text-lg text-minimal-text-light italic leading-relaxed">
-                    "Fueled by curiosity, driven by passion, <br />
-                    inspired by love."
-                  </blockquote>
-                  <div className="w-12 h-0.5 bg-gradient-to-r from-minimal-primary to-minimal-secondary mx-auto rounded-full" />
+              {/* Life Philosophy cards */}
+              <div className="space-y-4">
+                <div className="minimal-card p-8 text-center hover-lift">
+                  <div className="space-y-4">
+                    <h4 className="text-lg font-medium text-minimal-text clean-font">Life Motto</h4>
+                    <blockquote className="text-lg text-minimal-text-light italic leading-relaxed">
+                      "Learning never stops, growing never ends."
+                    </blockquote>
+                    <div className="w-12 h-0.5 bg-gradient-to-r from-minimal-primary to-minimal-secondary mx-auto rounded-full" />
+                  </div>
+                </div>
+
+                <div className="minimal-card p-8 text-center hover-lift">
+                  <div className="space-y-4">
+                    <h4 className="text-lg font-medium text-minimal-text clean-font">Inspiration</h4>
+                    <blockquote className="text-lg text-minimal-text-light italic leading-relaxed">
+                      "The only thing worse than being blind is having sight but no vision."
+                    </blockquote>
+                    <cite className="text-sm text-minimal-text-light clean-font">
+                      — Helen Keller
+                    </cite>
+                    <div className="w-12 h-0.5 bg-gradient-to-r from-minimal-secondary to-minimal-accent mx-auto rounded-full" />
+                  </div>
                 </div>
               </div>
             </div>
