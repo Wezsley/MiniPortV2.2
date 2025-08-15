@@ -57,6 +57,28 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Hacker/Cyberpunk theme colors
+        cyber: {
+          primary: "hsl(var(--cyber-primary))",
+          secondary: "hsl(var(--cyber-secondary))",
+          accent: "hsl(var(--cyber-accent))",
+          glow: "hsl(var(--cyber-glow))",
+          dark: "hsl(var(--cyber-dark))",
+          darker: "hsl(var(--cyber-darker))",
+          grid: "hsl(var(--cyber-grid))",
+        },
+        matrix: {
+          green: "hsl(var(--matrix-green))",
+          "green-bright": "hsl(var(--matrix-green-bright))",
+          "green-dim": "hsl(var(--matrix-green-dim))",
+        },
+        terminal: {
+          black: "hsl(var(--terminal-black))",
+          green: "hsl(var(--terminal-green))",
+          blue: "hsl(var(--terminal-blue))",
+          purple: "hsl(var(--terminal-purple))",
+          orange: "hsl(var(--terminal-orange))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
