@@ -40,20 +40,34 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Hacker/Cyberpunk theme variables */
+    --cyber-primary: 120 100% 50%;
+    --cyber-secondary: 180 100% 50%;
+    --cyber-accent: 240 100% 70%;
+    --cyber-glow: 120 100% 50%;
+    --cyber-dark: 220 13% 10%;
+    --cyber-darker: 220 13% 5%;
+    --cyber-grid: 120 50% 25%;
+
+    /* Matrix green colors */
+    --matrix-green: 120 100% 50%;
+    --matrix-green-bright: 120 100% 70%;
+    --matrix-green-dim: 120 50% 30%;
+
+    /* Terminal colors */
+    --terminal-black: 0 0% 8%;
+    --terminal-green: 120 100% 50%;
+    --terminal-blue: 200 100% 60%;
+    --terminal-purple: 280 100% 70%;
+    --terminal-orange: 30 100% 60%;
   }
 
   .dark {
