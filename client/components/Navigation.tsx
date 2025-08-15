@@ -1,0 +1,147 @@
+import { useState, useEffect } from 'react';
+import { Moon, Sun, Menu, X, Terminal, Code2 } from 'lucide-react';
+import { cn } from '@/lib/utils';
+
+export function Navigation() {
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('theme') === 'dark' || 
+        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    }
+    return true;
+  });
+  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (isDark) {
+      root.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      root.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [isDark]);
+
+  const toggleTheme = () => {
+    setIsDark(!isDark);
+  };
+
+  const navItems = [
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Contact', href: '#contact' },
+  ];
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-cyber-primary/20">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex items-center space-x-2">
+            <div className="relative">
+              <Terminal className="w-8 h-8 text-cyber-primary animate-glow-pulse" />
+              <div className="absolute inset-0 animate-ping">
+                <Terminal className="w-8 h-8 text-cyber-primary opacity-20" />
+              </div>
+            </div>
+            <span className="text-xl font-bold terminal-font glow-text">
+              Wesley<span className="text-cyber-secondary">.</span>dev
+            </span>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <button
+                key={item.name}
+                onClick={() => scrollToSection(item.href)}
+                className={cn(
+                  "relative px-3 py-2 text-sm font-medium transition-all duration-300",
+                  "hover:text-cyber-primary hover:glow-text",
+                  "before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5",
+                  "before:bg-cyber-primary before:transition-all before:duration-300",
+                  "hover:before:w-full terminal-font"
+                )}
+              >
+                <span className="relative z-10">{item.name}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Theme Toggle & Mobile Menu */}
+          <div className="flex items-center space-x-4">
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className={cn(
+                "p-2 rounded-lg border border-cyber-primary/30 bg-background/50",
+                "hover:border-cyber-primary hover:bg-cyber-primary/10",
+                "transition-all duration-300 group"
+              )}
+              aria-label="Toggle theme"
+            >
+              {isDark ? (
+                <Sun className="w-5 h-5 text-cyber-primary group-hover:animate-spin" />
+              ) : (
+                <Moon className="w-5 h-5 text-cyber-primary group-hover:animate-bounce" />
+              )}
+            </button>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className={cn(
+                "md:hidden p-2 rounded-lg border border-cyber-primary/30 bg-background/50",
+                "hover:border-cyber-primary hover:bg-cyber-primary/10",
+                "transition-all duration-300"
+              )}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <X className="w-5 h-5 text-cyber-primary" />
+              ) : (
+                <Menu className="w-5 h-5 text-cyber-primary" />
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-sm border border-cyber-primary/20 rounded-lg mt-2 matrix-bg">
+              {navItems.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className={cn(
+                    "block w-full text-left px-3 py-2 text-sm font-medium",
+                    "hover:text-cyber-primary hover:bg-cyber-primary/10",
+                    "transition-all duration-300 rounded-md terminal-font"
+                  )}
+                >
+                  <span className="flex items-center space-x-2">
+                    <Code2 className="w-4 h-4" />
+                    <span>{item.name}</span>
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+}
