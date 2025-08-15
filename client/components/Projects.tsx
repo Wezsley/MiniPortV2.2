@@ -39,10 +39,11 @@ export function Projects() {
   ];
 
   const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: number }) => (
-    <div 
+    <div
       className={cn(
-        "group relative overflow-hidden rounded-lg border border-cyber-primary/30 bg-background/20 backdrop-blur-sm",
-        "hover:border-cyber-primary/60 transition-all duration-500 hover:scale-105",
+        "group relative overflow-hidden border hacker-border cyber-glass",
+        "hover:border-cyber-primary/80 transition-all duration-500 hover:scale-[1.02]",
+        "data-stream",
         project.featured ? "lg:col-span-2" : ""
       )}
       style={{ animationDelay: `${index * 0.2}s` }}
