@@ -46,7 +46,7 @@ export function Navigation() {
               </div>
             </div>
             <span className="text-xl font-bold terminal-font glow-text">
-              Wesley<span className="text-cyber-secondary">.</span>dev
+              Wezs<span className="text-cyber-secondary"> </span>Coding
             </span>
           </div>
 
