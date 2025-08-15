@@ -9,65 +9,66 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Professional dark theme for light mode */
+    --background: 220 15% 8%;
+    --foreground: 120 80% 85%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 15% 10%;
+    --card-foreground: 120 80% 85%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 15% 10%;
+    --popover-foreground: 120 80% 85%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 120 100% 45%;
+    --primary-foreground: 220 15% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 120 80% 85%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 15% 12%;
+    --muted-foreground: 120 40% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 120 100% 45%;
+    --accent-foreground: 220 15% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 220 15% 8%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 120 30% 20%;
+    --input: 220 15% 12%;
+    --ring: 120 100% 45%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 220 15% 8%;
+    --sidebar-foreground: 120 80% 85%;
+    --sidebar-primary: 120 100% 45%;
+    --sidebar-primary-foreground: 220 15% 8%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 120 80% 85%;
+    --sidebar-border: 120 30% 20%;
+    --sidebar-ring: 120 100% 45%;
 
-    /* Hacker/Cyberpunk theme variables */
-    --cyber-primary: 120 100% 50%;
-    --cyber-secondary: 180 100% 50%;
-    --cyber-accent: 240 100% 70%;
-    --cyber-glow: 120 100% 50%;
-    --cyber-dark: 220 13% 10%;
-    --cyber-darker: 220 13% 5%;
-    --cyber-grid: 120 50% 25%;
+    /* Enhanced hacker/cyberpunk theme variables */
+    --cyber-primary: 120 100% 45%;
+    --cyber-secondary: 180 100% 40%;
+    --cyber-accent: 200 100% 50%;
+    --cyber-glow: 120 100% 45%;
+    --cyber-dark: 220 15% 3%;
+    --cyber-darker: 220 15% 1%;
+    --cyber-grid: 120 60% 25%;
 
     /* Matrix green colors */
-    --matrix-green: 120 100% 50%;
-    --matrix-green-bright: 120 100% 70%;
-    --matrix-green-dim: 120 50% 30%;
+    --matrix-green: 120 100% 45%;
+    --matrix-green-bright: 120 100% 60%;
+    --matrix-green-dim: 120 60% 30%;
 
     /* Terminal colors */
-    --terminal-black: 0 0% 8%;
-    --terminal-green: 120 100% 50%;
-    --terminal-blue: 200 100% 60%;
-    --terminal-purple: 280 100% 70%;
-    --terminal-orange: 30 100% 60%;
+    --terminal-black: 220 15% 5%;
+    --terminal-green: 120 100% 45%;
+    --terminal-blue: 200 100% 50%;
+    --terminal-purple: 280 100% 60%;
+    --terminal-orange: 30 100% 50%;
   }
 
   .dark {
