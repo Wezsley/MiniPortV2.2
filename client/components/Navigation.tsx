@@ -92,17 +92,28 @@ export function Navigation() {
             <button
               onClick={toggleTheme}
               className={cn(
-                "p-2 rounded-lg border border-cyber-primary/30 bg-background/50",
+                "relative p-3 rounded border border-cyber-primary/40 bg-cyber-dark/20 backdrop-blur-sm",
                 "hover:border-cyber-primary hover:bg-cyber-primary/10",
-                "transition-all duration-300 group"
+                "transition-all duration-300 group overflow-hidden",
+                "before:absolute before:inset-0 before:bg-gradient-to-r before:from-cyber-primary/20 before:to-cyber-secondary/20",
+                "before:translate-x-[-100%] before:transition-transform before:duration-300",
+                "hover:before:translate-x-0"
               )}
               aria-label="Toggle theme"
             >
-              {isDark ? (
-                <Sun className="w-5 h-5 text-cyber-primary group-hover:animate-spin" />
-              ) : (
-                <Moon className="w-5 h-5 text-cyber-primary group-hover:animate-bounce" />
-              )}
+              <div className="relative z-10 flex items-center space-x-1">
+                {isDark ? (
+                  <>
+                    <Sun className="w-4 h-4 text-cyber-primary" />
+                    <span className="text-xs terminal-font text-cyber-primary hidden sm:block">LIGHT</span>
+                  </>
+                ) : (
+                  <>
+                    <Moon className="w-4 h-4 text-cyber-primary" />
+                    <span className="text-xs terminal-font text-cyber-primary hidden sm:block">DARK</span>
+                  </>
+                )}
+              </div>
             </button>
 
             {/* Mobile Menu Button */}
