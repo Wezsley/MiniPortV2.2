@@ -26,16 +26,18 @@ export function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with low opacity hacker interface */}
+      {/* Background with low opacity scenic image */}
       <div className="absolute inset-0 z-0">
-        <div 
-          className="absolute inset-0 opacity-20 bg-cover bg-center bg-no-repeat"
+        <div
+          className="absolute inset-0 opacity-15 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F9fd4460e1a834f8db87a79c9f69f8604%2F94f0ce6f08004f31b1c4b29c8c86468e?format=webp&width=800')`
+            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F9fd4460e1a834f8db87a79c9f69f8604%2F2fc2302300a447a8a8f1682bc6cb179a?format=webp&width=800')`
           }}
         />
+        {/* Dark overlay for better contrast */}
+        <div className="absolute inset-0 bg-gradient-to-b from-cyber-darker/80 to-cyber-dark/90" />
         {/* Matrix grid overlay */}
-        <div className="absolute inset-0 matrix-bg opacity-90" />
+        <div className="absolute inset-0 matrix-bg opacity-60" />
         
         {/* Animated particles */}
         <div className="absolute inset-0">
