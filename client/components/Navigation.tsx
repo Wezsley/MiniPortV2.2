@@ -120,17 +120,22 @@ export function Navigation() {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={cn(
-                "md:hidden p-2 rounded-lg border border-cyber-primary/30 bg-background/50",
+                "md:hidden relative p-3 rounded border border-cyber-primary/40 bg-cyber-dark/20 backdrop-blur-sm",
                 "hover:border-cyber-primary hover:bg-cyber-primary/10",
-                "transition-all duration-300"
+                "transition-all duration-300 group overflow-hidden",
+                "before:absolute before:inset-0 before:bg-cyber-primary/10",
+                "before:scale-0 before:transition-transform before:duration-300",
+                "hover:before:scale-100"
               )}
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? (
-                <X className="w-5 h-5 text-cyber-primary" />
-              ) : (
-                <Menu className="w-5 h-5 text-cyber-primary" />
-              )}
+              <div className="relative z-10">
+                {isMenuOpen ? (
+                  <X className="w-4 h-4 text-cyber-primary" />
+                ) : (
+                  <Menu className="w-4 h-4 text-cyber-primary" />
+                )}
+              </div>
             </button>
           </div>
         </div>
