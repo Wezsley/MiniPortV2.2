@@ -88,18 +88,36 @@ export function Navigation() {
 
           {/* Theme Toggle & Mobile Menu */}
           <div className="flex items-center space-x-4">
-            {/* System Status */}
-            <div
+            {/* Enhanced Theme Toggle */}
+            <button
+              onClick={toggleTheme}
               className={cn(
                 "relative p-3 border border-cyber-primary/40 bg-cyber-dark/20 backdrop-blur-sm",
-                "cyber-glass"
+                "hover:border-cyber-primary hover:bg-cyber-primary/10 cyber-glass",
+                "transition-all duration-300 group overflow-hidden",
+                "before:absolute before:inset-0 before:bg-gradient-to-r before:from-cyber-primary/20 before:to-cyber-secondary/20",
+                "before:translate-x-[-100%] before:transition-transform before:duration-300",
+                "hover:before:translate-x-0"
               )}
+              aria-label="Toggle theme"
             >
               <div className="relative z-10 flex items-center space-x-2">
-                <div className="w-2 h-2 bg-cyber-primary rounded-full animate-pulse" />
-                <span className="text-xs terminal-font text-cyber-primary hidden sm:block">ONLINE</span>
+                {isDark ? (
+                  <>
+                    <Sun className="w-4 h-4 text-cyber-primary group-hover:rotate-90 transition-transform duration-300" />
+                    <span className="text-xs terminal-font text-cyber-primary hidden sm:block">LIGHT</span>
+                  </>
+                ) : (
+                  <>
+                    <Moon className="w-4 h-4 text-cyber-primary group-hover:scale-110 transition-transform duration-300" />
+                    <span className="text-xs terminal-font text-cyber-primary hidden sm:block">DARK</span>
+                  </>
+                )}
               </div>
-            </div>
+
+              {/* Scan line effect on hover */}
+              <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-cyber-primary to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-scan-line" />
+            </button>
 
             {/* Mobile Menu Button */}
             <button
