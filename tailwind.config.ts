@@ -102,83 +102,94 @@ export default {
             height: "0",
           },
         },
-        "glow-pulse": {
-          "0%, 100%": {
+        "fade-in": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(20px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        "slide-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(30px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        "slide-in-left": {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(-30px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
+        "slide-in-right": {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(30px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
+        "scale-in": {
+          "0%": {
+            opacity: "0",
+            transform: "scale(0.95)",
+          },
+          "100%": {
             opacity: "1",
             transform: "scale(1)",
           },
-          "50%": {
-            opacity: "0.8",
-            transform: "scale(1.05)",
-          },
         },
-        "matrix-rain": {
-          "0%": {
-            transform: "translateY(-100vh)",
-            opacity: "0",
-          },
-          "10%": {
-            opacity: "1",
-          },
-          "90%": {
-            opacity: "1",
-          },
-          "100%": {
-            transform: "translateY(100vh)",
-            opacity: "0",
-          },
-        },
-        "typing": {
-          "0%": {
-            width: "0ch",
-          },
-          "100%": {
-            width: "var(--typing-width, 20ch)",
-          },
-        },
-        "glitch": {
+        "gentle-bounce": {
           "0%, 100%": {
-            transform: "translate(0)",
+            transform: "translateY(0)",
           },
-          "20%": {
-            transform: "translate(-2px, 2px)",
-          },
-          "40%": {
-            transform: "translate(-2px, -2px)",
-          },
-          "60%": {
-            transform: "translate(2px, 2px)",
-          },
-          "80%": {
-            transform: "translate(2px, -2px)",
+          "50%": {
+            transform: "translateY(-10px)",
           },
         },
-        "scan-line": {
-          "0%": {
-            transform: "translateX(-100%)",
+        "pulse-glow": {
+          "0%, 100%": {
+            opacity: "0.3",
+            transform: "scale(1)",
           },
-          "100%": {
-            transform: "translateX(100%)",
+          "50%": {
+            opacity: "0.6",
+            transform: "scale(1.1)",
           },
         },
-        "float": {
+        "float-gentle": {
           "0%, 100%": {
             transform: "translateY(0px)",
           },
           "50%": {
-            transform: "translateY(-20px)",
+            transform: "translateY(-10px)",
           },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
-        "matrix-rain": "matrix-rain 3s linear infinite",
-        "typing": "typing 3s steps(var(--typing-steps, 20)) infinite",
-        "glitch": "glitch 0.3s ease-in-out infinite",
-        "scan-line": "scan-line 2s linear infinite",
-        "float": "float 6s ease-in-out infinite",
+        "fade-in": "fade-in 0.6s ease-out",
+        "slide-up": "slide-up 0.6s ease-out",
+        "slide-in-left": "slide-in-left 0.6s ease-out",
+        "slide-in-right": "slide-in-right 0.6s ease-out",
+        "scale-in": "scale-in 0.5s ease-out",
+        "gentle-bounce": "gentle-bounce 2s ease-in-out infinite",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "float-gentle": "float-gentle 4s ease-in-out infinite",
       },
     },
   },
