@@ -265,4 +265,67 @@
       radial-gradient(circle at 75% 75%, hsl(var(--cyber-secondary) / 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
   }
+
+  /* Cold-blooded hacker effects */
+  .hacker-border {
+    position: relative;
+    border: 1px solid hsl(var(--cyber-primary) / 0.4);
+  }
+
+  .hacker-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid hsl(var(--cyber-primary) / 0.8);
+    transform: scale(1.02);
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+
+  .hacker-border:hover::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .data-stream {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .data-stream::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, hsl(var(--cyber-primary)), transparent);
+    animation: data-flow 3s ease-in-out infinite;
+  }
+
+  @keyframes data-flow {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: 100%; }
+  }
+
+  .matrix-text {
+    background: linear-gradient(45deg, hsl(var(--cyber-primary)), hsl(var(--cyber-secondary)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cyber-glass {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--cyber-primary) / 0.2);
+    box-shadow:
+      0 0 20px hsl(var(--cyber-primary) / 0.1),
+      inset 0 0 20px hsl(var(--cyber-primary) / 0.05);
+  }
 }
