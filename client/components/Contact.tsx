@@ -1,5 +1,6 @@
 import { Mail, Github, Instagram, Facebook, MapPin, Code2, Send, Heart } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { InquiryForm } from './InquiryForm';
 
 export function Contact() {
   const socialLinks = [
