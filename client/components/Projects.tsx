@@ -36,9 +36,9 @@ export function Projects() {
   ];
 
   const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: number }) => (
-    <div 
+    <div
       className={cn(
-        "minimal-card p-8 hover-lift group relative overflow-hidden",
+        "minimal-card p-8 hover-lift group relative overflow-hidden quantum-border holographic-card",
         project.featured ? "lg:col-span-2" : ""
       )}
       style={{ animationDelay: `${index * 0.1}s` }}
