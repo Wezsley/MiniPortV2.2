@@ -9,7 +9,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { Navigation } from "./components/Navigation";
-import { useEffect } from "react";
+import { CursorTrail } from "./components/CursorTrail";
+import { LoadingScreen } from "./components/LoadingScreen";
+import { useEffect, useState } from "react";
 
 const queryClient = new QueryClient();
 
