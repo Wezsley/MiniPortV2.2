@@ -160,8 +160,13 @@ export function Contact() {
             </div>
           </div>
 
+          {/* Inquiry Form */}
+          <div className="slide-up" style={{ animationDelay: '0.4s' }}>
+            <InquiryForm />
+          </div>
+
           {/* Social Links */}
-          <div className="space-y-8 slide-up" style={{ animationDelay: '0.4s' }}>
+          <div className="space-y-8 slide-up" style={{ animationDelay: '0.6s' }}>
             <div className="text-center">
               <h3 className="text-2xl font-medium clean-font text-minimal-text mb-4">
                 Connect Across Platforms
