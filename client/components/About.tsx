@@ -134,7 +134,7 @@ export function About() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-2 left-2 right-2 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-white text-sm font-medium clean-font">Adventure 🌟</p>
+                      <p className="text-white text-sm font-medium clean-font">My Family 💕</p>
                     </div>
                   </div>
                 </div>
