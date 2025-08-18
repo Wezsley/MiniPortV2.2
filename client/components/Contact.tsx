@@ -207,7 +207,7 @@ export function Contact() {
           </div>
 
           {/* Footer */}
-          <div className="text-center mt-16 pt-8 border-t border-minimal-border slide-up" style={{ animationDelay: '0.6s' }}>
+          <div className="text-center mt-16 pt-8 border-t border-minimal-border slide-up" style={{ animationDelay: '0.8s' }}>
             <div className="space-y-4">
               <div className="flex items-center justify-center space-x-3">
                 <Code2 className="w-5 h-5 text-minimal-primary" />
