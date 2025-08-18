@@ -444,7 +444,7 @@
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   }
 
-  /* Hover effects */
+  /* Advanced hover effects */
   .hover-lift {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -452,5 +452,110 @@
   .hover-lift:hover {
     transform: translateY(-4px);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Unique professional effects */
+  .morphing-blob {
+    animation: morphing-shape 8s ease-in-out infinite;
+  }
+
+  .liquid-effect {
+    animation: liquid-movement 6s ease-in-out infinite;
+  }
+
+  .code-stream-effect {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .code-stream-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, hsl(var(--minimal-primary)), transparent);
+    animation: code-stream 3s linear infinite;
+  }
+
+  .holographic-card {
+    background: linear-gradient(45deg,
+      hsl(var(--minimal-surface)),
+      hsl(var(--minimal-primary) / 0.1),
+      hsl(var(--minimal-secondary) / 0.1),
+      hsl(var(--minimal-surface))
+    );
+    background-size: 400% 400%;
+    animation: holographic-shift 4s ease-in-out infinite;
+  }
+
+  .neural-dot {
+    animation: neural-network 2s ease-in-out infinite;
+  }
+
+  .quantum-border {
+    border: 1px solid hsl(var(--minimal-primary) / 0.3);
+    animation: quantum-glow 3s ease-in-out infinite;
+  }
+
+  .advanced-matrix-rain {
+    position: absolute;
+    width: 2px;
+    background: linear-gradient(to bottom,
+      transparent,
+      hsl(var(--minimal-primary)),
+      transparent
+    );
+    animation: matrix-rain-advanced 4s linear infinite;
+  }
+
+  .professional-gradient {
+    background: linear-gradient(135deg,
+      hsl(var(--minimal-surface)) 0%,
+      hsl(var(--minimal-primary) / 0.05) 25%,
+      hsl(var(--minimal-secondary) / 0.05) 50%,
+      hsl(var(--minimal-accent) / 0.05) 75%,
+      hsl(var(--minimal-surface)) 100%
+    );
+  }
+
+  /* Interactive skill bars */
+  .skill-bar-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skill-bar-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    transition: left 0.8s ease;
+  }
+
+  .skill-bar-container:hover::after {
+    left: 100%;
+  }
+
+  /* Advanced text effects */
+  .gradient-text-animated {
+    background: linear-gradient(45deg,
+      hsl(var(--minimal-primary)),
+      hsl(var(--minimal-secondary)),
+      hsl(var(--minimal-accent))
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: holographic-shift 3s ease-in-out infinite;
   }
 }
