@@ -142,19 +142,22 @@ export function Projects() {
 
           {/* Project Stats */}
           <div className="grid md:grid-cols-3 gap-6 slide-up" style={{ animationDelay: '0.2s' }}>
-            <div className="minimal-card p-8 text-center hover-lift">
-              <div className="text-3xl font-light text-minimal-primary mb-2 mono-font">3+</div>
+            <div className="minimal-card p-8 text-center hover-lift quantum-border group">
+              <div className="text-3xl font-light text-minimal-primary mb-2 mono-font neural-dot">3+</div>
               <div className="text-sm text-minimal-text-light clean-font">Projects Delivered</div>
+              <div className="absolute top-2 right-2 w-2 h-2 bg-minimal-primary/50 rounded-full neural-dot" />
             </div>
-            
-            <div className="minimal-card p-8 text-center hover-lift">
-              <div className="text-3xl font-light text-minimal-secondary mb-2 mono-font">∞</div>
+
+            <div className="minimal-card p-8 text-center hover-lift quantum-border group">
+              <div className="text-3xl font-light text-minimal-secondary mb-2 mono-font morphing-blob">∞</div>
               <div className="text-sm text-minimal-text-light clean-font">Lines of Code</div>
+              <div className="absolute top-2 right-2 w-2 h-2 bg-minimal-secondary/50 rounded-full liquid-effect" />
             </div>
-            
-            <div className="minimal-card p-8 text-center hover-lift">
-              <div className="text-3xl font-light text-minimal-accent mb-2 mono-font">24/7</div>
+
+            <div className="minimal-card p-8 text-center hover-lift quantum-border group">
+              <div className="text-3xl font-light text-minimal-accent mb-2 mono-font neural-dot">24/7</div>
               <div className="text-sm text-minimal-text-light clean-font">Learning Mode</div>
+              <div className="absolute top-2 right-2 w-2 h-2 bg-minimal-accent/50 rounded-full morphing-blob" />
             </div>
           </div>
 
