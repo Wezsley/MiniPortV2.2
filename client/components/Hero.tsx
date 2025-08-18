@@ -38,25 +38,40 @@ export function Hero() {
         {/* Subtle animated overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/60" />
 
-        {/* Enhanced floating elements with more animations */}
+        {/* Advanced floating elements with unique animations */}
         <div className="absolute inset-0 overflow-hidden">
-          {/* Geometric shapes */}
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-minimal-primary/20 rounded-full animate-float-gentle" />
-          <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-minimal-secondary/15 rounded-full animate-float-gentle" style={{ animationDelay: '1s' }} />
-          <div className="absolute top-1/2 left-3/4 w-1 h-1 bg-minimal-accent/25 rounded-full animate-float-gentle" style={{ animationDelay: '2s' }} />
+          {/* Morphing geometric shapes */}
+          <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-minimal-primary/20 morphing-blob" />
+          <div className="absolute top-3/4 right-1/4 w-6 h-6 bg-minimal-secondary/15 liquid-effect" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-1/2 left-3/4 w-3 h-3 bg-minimal-accent/25 morphing-blob" style={{ animationDelay: '2s' }} />
 
-          {/* Additional floating particles */}
-          <div className="absolute top-1/6 right-1/3 w-1.5 h-1.5 bg-minimal-primary/15 rounded-full animate-gentle-bounce" style={{ animationDelay: '0.5s' }} />
-          <div className="absolute bottom-1/4 left-1/6 w-2 h-2 bg-minimal-secondary/10 rounded-full animate-gentle-bounce" style={{ animationDelay: '1.5s' }} />
-          <div className="absolute top-2/3 right-1/6 w-1 h-1 bg-minimal-accent/20 rounded-full animate-gentle-bounce" style={{ animationDelay: '2.5s' }} />
+          {/* Neural network dots */}
+          <div className="absolute top-1/6 right-1/3 w-2 h-2 bg-minimal-primary/30 rounded-full neural-dot" style={{ animationDelay: '0.5s' }} />
+          <div className="absolute bottom-1/4 left-1/6 w-3 h-3 bg-minimal-secondary/20 rounded-full neural-dot" style={{ animationDelay: '1.5s' }} />
+          <div className="absolute top-2/3 right-1/6 w-1.5 h-1.5 bg-minimal-accent/25 rounded-full neural-dot" style={{ animationDelay: '2.5s' }} />
 
-          {/* Subtle moving gradients */}
-          <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-radial from-minimal-primary/5 to-transparent rounded-full animate-float-gentle" style={{ animationDelay: '3s' }} />
-          <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-radial from-minimal-secondary/3 to-transparent rounded-full animate-float-gentle" style={{ animationDelay: '4s' }} />
+          {/* Advanced matrix rain */}
+          {[...Array(8)].map((_, i) => (
+            <div
+              key={i}
+              className="advanced-matrix-rain"
+              style={{
+                left: `${10 + i * 12}%`,
+                height: `${30 + Math.random() * 40}px`,
+                animationDelay: `${i * 0.5}s`,
+                animationDuration: `${4 + Math.random() * 2}s`
+              }}
+            />
+          ))}
 
-          {/* Animated light rays */}
-          <div className="absolute top-1/3 left-0 w-px h-24 bg-gradient-to-b from-transparent via-minimal-primary/20 to-transparent rotate-12 animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="absolute bottom-1/3 right-0 w-px h-32 bg-gradient-to-b from-transparent via-minimal-secondary/15 to-transparent -rotate-12 animate-pulse" style={{ animationDelay: '2s' }} />
+          {/* Holographic moving gradients */}
+          <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-radial from-minimal-primary/8 to-transparent rounded-full liquid-effect" style={{ animationDelay: '3s' }} />
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-radial from-minimal-secondary/5 to-transparent rounded-full morphing-blob" style={{ animationDelay: '4s' }} />
+
+          {/* Code stream effects */}
+          <div className="absolute top-1/3 left-0 w-24 h-0.5 code-stream-effect" style={{ animationDelay: '1s' }} />
+          <div className="absolute bottom-1/3 right-0 w-32 h-0.5 code-stream-effect" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-1/2 left-1/2 w-20 h-0.5 code-stream-effect" style={{ animationDelay: '3s' }} />
         </div>
 
         {/* Subtle overlay animation */}
