@@ -134,11 +134,11 @@ export function Hero() {
           {/* Name with elegant typing effect */}
           <div className="space-y-6 slide-up">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-light clean-font">
-              <span className="bg-gradient-to-r from-minimal-primary to-minimal-secondary bg-clip-text text-transparent">
+              <span className="gradient-text-animated">
                 {text}
               </span>
               {currentIndex < fullText.length && (
-                <span className="animate-pulse text-minimal-primary">|</span>
+                <span className="animate-pulse text-minimal-primary neural-dot">|</span>
               )}
             </h1>
             
