@@ -16,6 +16,8 @@ import { useEffect, useState } from "react";
 const queryClient = new QueryClient();
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     // Set dark mode as default
     const root = window.document.documentElement;
@@ -25,6 +27,13 @@ const App = () => {
     if (isDark) {
       root.classList.add('dark');
     }
+
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -32,8 +41,10 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
+        {isLoading && <LoadingScreen />}
+        <CursorTrail />
         <BrowserRouter>
-          <div className="min-h-screen bg-background text-foreground">
+          <div className="min-h-screen bg-background text-foreground professional-gradient">
             <Navigation />
             <Routes>
               <Route path="/" element={<Index />} />
