@@ -39,7 +39,13 @@ export function Contact() {
   ];
 
   const handleSocialClick = (url: string) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
+    if (url.startsWith('mailto:')) {
+      // For email links, open in a new blank page
+      window.open(url, '_blank', 'noopener,noreferrer');
+    } else {
+      // For other links, open normally
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
   };
 
   return (
