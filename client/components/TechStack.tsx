@@ -4,11 +4,11 @@ import { cn } from '@/lib/utils';
 export function TechStack() {
   const programmingLanguages = [
     { name: 'C#', level: 85, color: 'bg-purple-500' },
-    { name: 'JavaScript', level: 90, color: 'bg-yellow-500' },
-    { name: 'Python', level: 80, color: 'bg-blue-500' },
+    { name: 'JavaScript', level: 70, color: 'bg-yellow-500' },
+    { name: 'Python', level: 70, color: 'bg-blue-500' },
     { name: 'Java', level: 75, color: 'bg-red-500' },
-    { name: 'PHP (Laravel)', level: 85, color: 'bg-indigo-500' },
-    { name: 'CSS', level: 90, color: 'bg-blue-400' },
+    { name: 'PHP (Laravel)', level: 70, color: 'bg-indigo-500' },
+    { name: 'CSS', level: 70, color: 'bg-blue-400' },
     { name: 'MySQL', level: 80, color: 'bg-orange-500' },
   ];
 
