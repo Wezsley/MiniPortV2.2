@@ -84,7 +84,18 @@ export function Hero() {
           
           {/* Minimalist Profile Image with Animations */}
           <div className="flex justify-center mt-20">
-            <div className="profile-container w-48 h-48 md:w-64 md:h-64">
+            <button
+              className="profile-container w-48 h-48 md:w-64 md:h-64 focus:outline-none focus:ring-4 focus:ring-minimal-primary/50 rounded-full transition-all duration-300 hover:scale-105 cursor-pointer"
+              onClick={() => {
+                // Create a fun interaction when profile is clicked
+                const message = document.createElement('div');
+                message.innerHTML = '👋 Hello! Thanks for clicking! <br/>Feel free to scroll down to learn more about me.';
+                message.className = 'fixed top-20 left-1/2 transform -translate-x-1/2 bg-minimal-primary text-white px-6 py-3 rounded-lg shadow-xl z-50 fade-in text-center font-medium';
+                document.body.appendChild(message);
+                setTimeout(() => document.body.removeChild(message), 4000);
+              }}
+              aria-label="Click to interact with Wesley's profile"
+            >
               {/* Glow effect */}
               <div className="profile-glow" />
 
@@ -128,7 +139,7 @@ export function Hero() {
                 <div className="absolute -bottom-3 -left-3 w-4 h-4 bg-minimal-secondary rounded-full liquid-effect" style={{ animationDelay: '0.5s' }} />
                 <div className="absolute top-0 left-0 w-2 h-2 bg-minimal-accent rounded-full morphing-blob" style={{ animationDelay: '1s' }} />
               </div>
-            </div>
+            </button>
           </div>
 
           {/* Name with elegant typing effect */}
