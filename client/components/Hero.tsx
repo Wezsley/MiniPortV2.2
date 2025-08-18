@@ -91,36 +91,42 @@ export function Hero() {
               {/* Gradient ring */}
               <div className="profile-ring" />
 
-              {/* Main image container */}
+              {/* Main image container with advanced effects */}
               <div className="relative w-full h-full">
-                <div className="w-full h-full rounded-full overflow-hidden border-2 border-minimal-border bg-minimal-surface relative">
+                <div className="w-full h-full rounded-full overflow-hidden quantum-border bg-minimal-surface relative">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F9fd4460e1a834f8db87a79c9f69f8604%2Fe2cf993ac0204451bd9a2c42f8e14e9a?format=webp&width=800"
                     alt="Wesley Belmonte"
                     className="w-full h-full object-cover"
                   />
 
-                  {/* Inner animation overlay */}
+                  {/* Advanced inner animation overlay */}
                   <div className="absolute inset-0 rounded-full">
-                    {/* Breathing light effect */}
-                    <div className="absolute inset-4 rounded-full border border-minimal-primary/30 animate-pulse" />
-                    <div className="absolute inset-6 rounded-full border border-minimal-secondary/20 animate-pulse" style={{ animationDelay: '0.5s' }} />
+                    {/* Quantum breathing effect */}
+                    <div className="absolute inset-3 rounded-full border border-minimal-primary/40 neural-dot" />
+                    <div className="absolute inset-5 rounded-full border border-minimal-secondary/30 neural-dot" style={{ animationDelay: '0.7s' }} />
+                    <div className="absolute inset-7 rounded-full border border-minimal-accent/20 neural-dot" style={{ animationDelay: '1.4s' }} />
 
-                    {/* Floating particles inside */}
-                    <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-minimal-primary/60 rounded-full animate-float-gentle" />
-                    <div className="absolute bottom-1/3 right-1/4 w-1.5 h-1.5 bg-minimal-secondary/40 rounded-full animate-float-gentle" style={{ animationDelay: '1s' }} />
-                    <div className="absolute top-1/2 right-1/3 w-0.5 h-0.5 bg-minimal-accent/50 rounded-full animate-float-gentle" style={{ animationDelay: '2s' }} />
+                    {/* Liquid floating particles */}
+                    <div className="absolute top-1/4 left-1/4 w-1.5 h-1.5 bg-minimal-primary/70 rounded-full liquid-effect" />
+                    <div className="absolute bottom-1/3 right-1/4 w-2 h-2 bg-minimal-secondary/50 morphing-blob" style={{ animationDelay: '1s' }} />
+                    <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-minimal-accent/60 neural-dot" style={{ animationDelay: '2s' }} />
 
-                    {/* Subtle scanning line */}
+                    {/* Advanced scanning effects */}
                     <div className="absolute inset-0 rounded-full overflow-hidden">
-                      <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-minimal-primary/40 to-transparent animate-pulse" style={{ animationDelay: '0.3s' }} />
+                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-minimal-primary/50 to-transparent code-stream-effect" />
+                      <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-minimal-secondary/40 to-transparent code-stream-effect" style={{ animationDelay: '1.5s' }} />
                     </div>
+
+                    {/* Holographic overlay */}
+                    <div className="absolute inset-0 rounded-full holographic-card opacity-20" />
                   </div>
                 </div>
 
-                {/* Floating indicators */}
-                <div className="absolute -top-2 -right-2 w-4 h-4 bg-minimal-primary rounded-full opacity-80 animate-pulse" />
-                <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-minimal-secondary rounded-full opacity-60 animate-pulse" style={{ animationDelay: '0.5s' }} />
+                {/* Advanced floating indicators */}
+                <div className="absolute -top-3 -right-3 w-5 h-5 bg-minimal-primary rounded-full neural-dot" />
+                <div className="absolute -bottom-3 -left-3 w-4 h-4 bg-minimal-secondary rounded-full liquid-effect" style={{ animationDelay: '0.5s' }} />
+                <div className="absolute top-0 left-0 w-2 h-2 bg-minimal-accent rounded-full morphing-blob" style={{ animationDelay: '1s' }} />
               </div>
             </div>
           </div>
