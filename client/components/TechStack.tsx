@@ -50,19 +50,26 @@ export function TechStack() {
                 {skill.level}%
               </span>
             </div>
-            <div className="relative">
-              <div className="w-full bg-minimal-border rounded-full h-2 overflow-hidden">
-                <div 
+            <div className="relative skill-bar-container">
+              <div className="w-full bg-minimal-border rounded-full h-3 overflow-hidden quantum-border">
+                <div
                   className={cn(
-                    "h-full rounded-full transition-all duration-1000 ease-out",
-                    skill.color
+                    "h-full rounded-full transition-all duration-1000 ease-out relative",
+                    skill.color,
+                    "holographic-card"
                   )}
-                  style={{ 
+                  style={{
                     width: `${skill.level}%`,
                     animationDelay: `${index * 0.1}s`
                   }}
-                />
+                >
+                  {/* Advanced skill bar glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse" />
+                </div>
               </div>
+
+              {/* Floating skill particles */}
+              <div className="absolute top-0 left-0 w-1 h-1 bg-minimal-primary/50 rounded-full neural-dot" style={{ left: `${skill.level - 5}%` }} />
             </div>
           </div>
         ))}
