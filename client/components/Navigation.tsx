@@ -90,17 +90,28 @@ export function Navigation() {
               className={cn(
                 "p-2.5 rounded-lg border border-minimal-border bg-minimal-surface",
                 "hover:border-minimal-primary hover:bg-minimal-surface-hover",
-                "transition-all duration-300 group"
+                "transition-all duration-500 group relative overflow-hidden"
               )}
               aria-label="Toggle theme"
             >
               <div className="relative w-5 h-5">
-                {isDark ? (
+                <div className={cn(
+                  "absolute inset-0 transition-all duration-500 ease-in-out",
+                  isDark ? "opacity-100 rotate-0 scale-100" : "opacity-0 rotate-180 scale-0"
+                )}>
                   <Sun className="w-5 h-5 text-minimal-primary group-hover:rotate-90 transition-transform duration-300" />
-                ) : (
+                </div>
+
+                <div className={cn(
+                  "absolute inset-0 transition-all duration-500 ease-in-out",
+                  !isDark ? "opacity-100 rotate-0 scale-100" : "opacity-0 -rotate-180 scale-0"
+                )}>
                   <Moon className="w-5 h-5 text-minimal-primary group-hover:scale-110 transition-transform duration-300" />
-                )}
+                </div>
               </div>
+
+              {/* Ripple effect on click */}
+              <div className="absolute inset-0 bg-minimal-primary/20 rounded-lg scale-0 group-active:scale-100 transition-transform duration-200" />
             </button>
 
             {/* Mobile Menu Button */}
