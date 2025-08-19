@@ -40,10 +40,10 @@ export function Contact() {
 
   const handleSocialClick = (url: string) => {
     if (url.startsWith('mailto:')) {
-      // For email links, open in a new blank page
-      window.open(url, '_blank', 'noopener,noreferrer');
+      // For email links, let browser handle naturally to open email client
+      window.location.href = url;
     } else {
-      // For other links, open normally
+      // For other social links, open in new tab
       window.open(url, '_blank', 'noopener,noreferrer');
     }
   };
