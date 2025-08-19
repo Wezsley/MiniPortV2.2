@@ -224,7 +224,7 @@ export function Contact() {
               </div>
               
               <p className="text-sm text-minimal-text-light clean-font">
-                Built with ❤️ using React, TypeScript, and TailwindCSS
+                Built using React, TypeScript, and TailwindCSS
               </p>
               
               <p className="text-xs text-minimal-text-light mono-font">
