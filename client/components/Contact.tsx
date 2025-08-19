@@ -99,6 +99,20 @@ export function Contact() {
                         <a
                           href="mailto:2ez4wezs@gmail.com"
                           className="text-minimal-primary hover:text-minimal-secondary transition-colors duration-300 mono-font"
+                          onClick={(e) => {
+                            // Handle Brave browser specifically
+                            e.preventDefault();
+                            try {
+                              const link = document.createElement('a');
+                              link.href = 'mailto:2ez4wezs@gmail.com';
+                              link.style.display = 'none';
+                              document.body.appendChild(link);
+                              link.click();
+                              document.body.removeChild(link);
+                            } catch (error) {
+                              window.location.href = 'mailto:2ez4wezs@gmail.com';
+                            }
+                          }}
                         >
                           2ez4wezs@gmail.com
                         </a>
