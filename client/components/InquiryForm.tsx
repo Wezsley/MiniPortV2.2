@@ -70,7 +70,7 @@ export function InquiryForm() {
           Send Me an Inquiry
         </h3>
         <p className="text-minimal-text-light clean-font">
-          Have a project in mind? Let's discuss it!
+          This will open your email client with a pre-filled message ready to send!
         </p>
       </div>
 
