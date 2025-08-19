@@ -198,7 +198,7 @@ export function InquiryForm() {
           {submitStatus === 'success' && (
             <div className="flex items-center justify-center space-x-2 text-green-600 bg-green-50 p-3 rounded-lg">
               <CheckCircle className="w-5 h-5" />
-              <span className="clean-font">Email client opened! Your inquiry is ready to send.</span>
+              <span className="clean-font">Email client opened! Please click 'Send' in your email app to complete.</span>
             </div>
           )}
 
