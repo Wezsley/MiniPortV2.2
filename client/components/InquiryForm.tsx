@@ -216,9 +216,6 @@ export function InquiryForm() {
         <p className="text-sm text-minimal-text-light clean-font mb-2">
           Or contact me directly:
         </p>
-        <p className="text-xs text-minimal-text-light clean-font mb-3 opacity-75">
-          Note: If email links open in browser (Brave users), please copy the email address manually
-        </p>
         <a
           href="mailto:2ez4wezs@gmail.com"
           className="text-minimal-primary hover:text-minimal-secondary transition-colors duration-300 mono-font"
