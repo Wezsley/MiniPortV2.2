@@ -87,8 +87,6 @@ export function Contact() {
                         <h4 className="font-medium text-minimal-text clean-font">Email</h4>
                         <a
                           href="mailto:2ez4wezs@gmail.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
                           className="text-minimal-primary hover:text-minimal-secondary transition-colors duration-300 mono-font"
                         >
                           2ez4wezs@gmail.com
