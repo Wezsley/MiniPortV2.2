@@ -482,12 +482,12 @@
   .holographic-card {
     background: linear-gradient(45deg,
       hsl(var(--minimal-surface)),
-      hsl(var(--minimal-primary) / 0.1),
-      hsl(var(--minimal-secondary) / 0.1),
+      hsl(var(--minimal-primary) / 0.05),
+      hsl(var(--minimal-secondary) / 0.05),
       hsl(var(--minimal-surface))
     );
     background-size: 400% 400%;
-    animation: holographic-shift 4s ease-in-out infinite;
+    animation: holographic-shift 8s ease-in-out infinite;
   }
 
   .neural-dot {
