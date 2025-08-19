@@ -556,6 +556,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: holographic-shift 3s ease-in-out infinite;
+    animation: holographic-shift 6s ease-in-out infinite;
   }
 }
