@@ -119,15 +119,28 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family:
+      "Inter",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      sans-serif;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
 
   /* Smooth theme transition for all elements */
   *,
   *::before,
   *::after {
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease,
+      fill 0.3s ease,
+      stroke 0.3s ease;
   }
 
   /* Clean scrollbar */
@@ -161,7 +174,9 @@
   .minimal-card:hover {
     background: hsl(var(--minimal-surface-hover));
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px hsl(var(--minimal-shadow) / 0.1), 0 10px 10px -5px hsl(var(--minimal-shadow) / 0.04);
+    box-shadow:
+      0 10px 25px -5px hsl(var(--minimal-shadow) / 0.1),
+      0 10px 10px -5px hsl(var(--minimal-shadow) / 0.04);
   }
 
   /* Minimalist buttons */
@@ -184,13 +199,18 @@
   }
 
   .minimal-button::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
     transition: left 0.5s;
   }
 
@@ -200,20 +220,31 @@
 
   /* Typography */
   .clean-font {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family:
+      "Inter",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      sans-serif;
     font-weight: 400;
     line-height: 1.6;
   }
 
   .mono-font {
-    font-family: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+    font-family:
+      "JetBrains Mono", "SF Mono", "Monaco", "Inconsolata", monospace;
     font-weight: 400;
     letter-spacing: 0.025em;
   }
 
   /* Minimal background */
   .minimal-bg {
-    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--minimal-surface)) 100%);
+    background: linear-gradient(
+      135deg,
+      hsl(var(--background)) 0%,
+      hsl(var(--minimal-surface)) 100%
+    );
   }
 
   /* Profile picture effects */
@@ -236,7 +267,11 @@
     position: absolute;
     inset: -4px;
     border-radius: 50%;
-    background: linear-gradient(45deg, hsl(var(--minimal-primary)), hsl(var(--minimal-secondary)));
+    background: linear-gradient(
+      45deg,
+      hsl(var(--minimal-primary)),
+      hsl(var(--minimal-secondary))
+    );
     opacity: 0;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: -1;
@@ -251,7 +286,11 @@
     position: absolute;
     inset: -20px;
     border-radius: 50%;
-    background: radial-gradient(circle, hsl(var(--minimal-primary) / 0.3) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      hsl(var(--minimal-primary) / 0.3) 0%,
+      transparent 70%
+    );
     opacity: 0;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: -2;
@@ -267,13 +306,14 @@
   }
 
   @keyframes pulse-glow {
-    0%, 100% { 
-      opacity: 0.3; 
-      transform: scale(1); 
+    0%,
+    100% {
+      opacity: 0.3;
+      transform: scale(1);
     }
-    50% { 
-      opacity: 0.6; 
-      transform: scale(1.1); 
+    50% {
+      opacity: 0.6;
+      transform: scale(1.1);
     }
   }
 
@@ -294,7 +334,8 @@
 
   /* Advanced unique animations */
   @keyframes morphing-shape {
-    0%, 100% {
+    0%,
+    100% {
       border-radius: 50% 50% 50% 50%;
       transform: rotate(0deg) scale(1);
     }
@@ -313,7 +354,8 @@
   }
 
   @keyframes liquid-movement {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0) rotate(0deg);
       border-radius: 50%;
     }
@@ -342,7 +384,8 @@
   }
 
   @keyframes holographic-shift {
-    0%, 100% {
+    0%,
+    100% {
       background-position: 0% 50%;
       filter: hue-rotate(0deg);
     }
@@ -387,7 +430,8 @@
   }
 
   @keyframes quantum-glow {
-    0%, 100% {
+    0%,
+    100% {
       box-shadow:
         0 0 5px hsl(var(--minimal-primary)),
         0 0 10px hsl(var(--minimal-primary)),
@@ -459,7 +503,9 @@
 
   .hover-lift:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   /* Unique professional effects */
@@ -477,18 +523,24 @@
   }
 
   .code-stream-effect::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, hsl(var(--minimal-primary)), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--minimal-primary)),
+      transparent
+    );
     animation: code-stream 3s linear infinite;
   }
 
   .holographic-card {
-    background: linear-gradient(45deg,
+    background: linear-gradient(
+      45deg,
       hsl(var(--minimal-surface)),
       hsl(var(--minimal-primary) / 0.05),
       hsl(var(--minimal-secondary) / 0.05),
@@ -510,7 +562,8 @@
   .advanced-matrix-rain {
     position: absolute;
     width: 2px;
-    background: linear-gradient(to bottom,
+    background: linear-gradient(
+      to bottom,
       transparent,
       hsl(var(--minimal-primary)),
       transparent
@@ -519,7 +572,8 @@
   }
 
   .professional-gradient {
-    background: linear-gradient(135deg,
+    background: linear-gradient(
+      135deg,
       hsl(var(--minimal-surface)) 0%,
       hsl(var(--minimal-primary) / 0.05) 25%,
       hsl(var(--minimal-secondary) / 0.05) 50%,
@@ -535,13 +589,14 @@
   }
 
   .skill-bar-container::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg,
+    background: linear-gradient(
+      90deg,
       transparent,
       rgba(255, 255, 255, 0.4),
       transparent
@@ -555,7 +610,8 @@
 
   /* Advanced text effects */
   .gradient-text-animated {
-    background: linear-gradient(45deg,
+    background: linear-gradient(
+      45deg,
       hsl(var(--minimal-primary)),
       hsl(var(--minimal-secondary)),
       hsl(var(--minimal-accent))

@@ -1,51 +1,60 @@
-import { Mail, Github, Instagram, Facebook, MapPin, Code2, Send, Heart } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { InquiryForm } from './InquiryForm';
+import {
+  Mail,
+  Github,
+  Instagram,
+  Facebook,
+  MapPin,
+  Code2,
+  Send,
+  Heart,
+} from "lucide-react";
+import { cn } from "@/lib/utils";
+import { InquiryForm } from "./InquiryForm";
 
 export function Contact() {
   const socialLinks = [
     {
-      name: 'Facebook',
-      url: 'https://www.facebook.com/wesley.belmonte.10',
+      name: "Facebook",
+      url: "https://www.facebook.com/wesley.belmonte.10",
       icon: Facebook,
-      color: 'from-blue-600 to-blue-700',
-      username: '@wesley.belmonte.10',
-      description: 'Connect on Facebook'
+      color: "from-blue-600 to-blue-700",
+      username: "@wesley.belmonte.10",
+      description: "Connect on Facebook",
     },
     {
-      name: 'GitHub',
-      url: 'https://github.com/Wezsley',
+      name: "GitHub",
+      url: "https://github.com/Wezsley",
       icon: Github,
-      color: 'from-gray-700 to-gray-800',
-      username: '@Wezsley',
-      description: 'Check out my code'
+      color: "from-gray-700 to-gray-800",
+      username: "@Wezsley",
+      description: "Check out my code",
     },
     {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/yelsew129/',
+      name: "Instagram",
+      url: "https://www.instagram.com/yelsew129/",
       icon: Instagram,
-      color: 'from-pink-500 to-purple-600',
-      username: '@yelsew129',
-      description: 'Follow my journey'
+      color: "from-pink-500 to-purple-600",
+      username: "@yelsew129",
+      description: "Follow my journey",
     },
     {
-      name: 'Email',
-      url: 'mailto:2ez4wezs@gmail.com',
+      name: "Email",
+      url: "mailto:2ez4wezs@gmail.com",
       icon: Mail,
-      color: 'from-minimal-primary to-minimal-secondary',
-      username: '2ez4wezs@gmail.com',
-      description: 'Send me a message'
-    }
+      color: "from-minimal-primary to-minimal-secondary",
+      username: "2ez4wezs@gmail.com",
+      description: "Send me a message",
+    },
   ];
 
   const handleSocialClick = (url: string) => {
-    if (url.startsWith('mailto:')) {
+    if (url.startsWith("mailto:")) {
       // For email links, try multiple methods to handle different browsers
       try {
         // Method 1: Try creating a temporary link element (works better in Brave)
-        const link = document.createElement('a');
+        const link = document.createElement("a");
         link.href = url;
-        link.style.display = 'none';
+        link.style.display = "none";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -55,7 +64,7 @@ export function Contact() {
       }
     } else {
       // For other social links, open in new tab
-      window.open(url, '_blank', 'noopener,noreferrer');
+      window.open(url, "_blank", "noopener,noreferrer");
     }
   };
 
@@ -71,7 +80,8 @@ export function Contact() {
               </span>
             </h2>
             <p className="text-lg text-minimal-text-light max-w-2xl mx-auto">
-              Ready to collaborate on your next project or just want to say hello?
+              Ready to collaborate on your next project or just want to say
+              hello?
             </p>
             <div className="w-16 h-0.5 bg-gradient-to-r from-minimal-primary to-minimal-secondary mx-auto rounded-full" />
           </div>
@@ -85,9 +95,10 @@ export function Contact() {
                   Get In Touch
                 </h3>
                 <p className="text-lg text-minimal-text-light leading-relaxed mb-8 clean-font">
-                  I'm always interested in new opportunities, collaborations, and conversations about technology, design, and innovation.
+                  I'm always interested in new opportunities, collaborations,
+                  and conversations about technology, design, and innovation.
                 </p>
-                
+
                 <div className="space-y-4">
                   <div className="minimal-card p-6 hover-lift">
                     <div className="flex items-center space-x-4">
@@ -95,7 +106,9 @@ export function Contact() {
                         <Mail className="w-5 h-5 text-minimal-primary" />
                       </div>
                       <div>
-                        <h4 className="font-medium text-minimal-text clean-font">Email</h4>
+                        <h4 className="font-medium text-minimal-text clean-font">
+                          Email
+                        </h4>
                         <a
                           href="mailto:2ez4wezs@gmail.com"
                           className="text-minimal-primary hover:text-minimal-secondary transition-colors duration-300 mono-font"
@@ -103,14 +116,15 @@ export function Contact() {
                             // Handle Brave browser specifically
                             e.preventDefault();
                             try {
-                              const link = document.createElement('a');
-                              link.href = 'mailto:2ez4wezs@gmail.com';
-                              link.style.display = 'none';
+                              const link = document.createElement("a");
+                              link.href = "mailto:2ez4wezs@gmail.com";
+                              link.style.display = "none";
                               document.body.appendChild(link);
                               link.click();
                               document.body.removeChild(link);
                             } catch (error) {
-                              window.location.href = 'mailto:2ez4wezs@gmail.com';
+                              window.location.href =
+                                "mailto:2ez4wezs@gmail.com";
                             }
                           }}
                         >
@@ -126,8 +140,12 @@ export function Contact() {
                         <MapPin className="w-5 h-5 text-minimal-secondary" />
                       </div>
                       <div>
-                        <h4 className="font-medium text-minimal-text clean-font">Location</h4>
-                        <span className="text-minimal-text-light mono-font">Philippines</span>
+                        <h4 className="font-medium text-minimal-text clean-font">
+                          Location
+                        </h4>
+                        <span className="text-minimal-text-light mono-font">
+                          Philippines
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -138,9 +156,13 @@ export function Contact() {
                         <Code2 className="w-5 h-5 text-minimal-accent" />
                       </div>
                       <div>
-                        <h4 className="font-medium text-minimal-text clean-font">Status</h4>
+                        <h4 className="font-medium text-minimal-text clean-font">
+                          Status
+                        </h4>
                         <div className="flex items-center space-x-2">
-                          <span className="text-minimal-accent mono-font">Available for opportunities</span>
+                          <span className="text-minimal-accent mono-font">
+                            Available for opportunities
+                          </span>
                           <div className="w-2 h-2 bg-minimal-accent rounded-full animate-pulse" />
                         </div>
                       </div>
@@ -151,7 +173,10 @@ export function Contact() {
             </div>
 
             {/* Right side - Quote/Values */}
-            <div className="space-y-8 slide-up" style={{ animationDelay: '0.2s' }}>
+            <div
+              className="space-y-8 slide-up"
+              style={{ animationDelay: "0.2s" }}
+            >
               <div className="minimal-card p-8 text-center hover-lift">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-br from-minimal-primary to-minimal-secondary flex items-center justify-center">
                   <Code2 className="w-8 h-8 text-white" />
@@ -192,12 +217,15 @@ export function Contact() {
           </div>
 
           {/* Inquiry Form */}
-          <div className="slide-up" style={{ animationDelay: '0.4s' }}>
+          <div className="slide-up" style={{ animationDelay: "0.4s" }}>
             <InquiryForm />
           </div>
 
           {/* Social Links */}
-          <div className="space-y-8 slide-up" style={{ animationDelay: '0.6s' }}>
+          <div
+            className="space-y-8 slide-up"
+            style={{ animationDelay: "0.6s" }}
+          >
             <div className="text-center">
               <h3 className="text-2xl font-medium clean-font text-minimal-text mb-4">
                 Connect Across Platforms
@@ -215,14 +243,16 @@ export function Contact() {
                   className="minimal-card p-6 text-center hover-lift group"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className={cn(
-                    "w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br flex items-center justify-center",
-                    "group-hover:scale-110 transition-transform duration-300",
-                    social.color
-                  )}>
+                  <div
+                    className={cn(
+                      "w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br flex items-center justify-center",
+                      "group-hover:scale-110 transition-transform duration-300",
+                      social.color,
+                    )}
+                  >
                     <social.icon className="w-6 h-6 text-white" />
                   </div>
-                  
+
                   <h4 className="font-medium text-minimal-text group-hover:text-minimal-primary transition-colors duration-300 clean-font">
                     {social.name}
                   </h4>
@@ -238,18 +268,25 @@ export function Contact() {
           </div>
 
           {/* Footer */}
-          <div className="text-center mt-16 pt-8 border-t border-minimal-border slide-up" style={{ animationDelay: '0.8s' }}>
+          <div
+            className="text-center mt-16 pt-8 border-t border-minimal-border slide-up"
+            style={{ animationDelay: "0.8s" }}
+          >
             <div className="space-y-4">
               <div className="flex items-center justify-center space-x-3">
                 <Code2 className="w-5 h-5 text-minimal-primary" />
-                <span className="mono-font text-minimal-primary">wesley@portfolio:~$</span>
-                <span className="mono-font text-minimal-text-light">echo "Thanks for visiting!"</span>
+                <span className="mono-font text-minimal-primary">
+                  wesley@portfolio:~$
+                </span>
+                <span className="mono-font text-minimal-text-light">
+                  echo "Thanks for visiting!"
+                </span>
               </div>
-              
+
               <p className="text-sm text-minimal-text-light clean-font">
                 Built using React, TypeScript, and TailwindCSS
               </p>
-              
+
               <p className="text-xs text-minimal-text-light mono-font">
                 © 2024 Wesley Belmonte. All rights reserved.
               </p>
