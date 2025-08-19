@@ -40,8 +40,19 @@ export function Contact() {
 
   const handleSocialClick = (url: string) => {
     if (url.startsWith('mailto:')) {
-      // For email links, let browser handle naturally to open email client
-      window.location.href = url;
+      // For email links, try multiple methods to handle different browsers
+      try {
+        // Method 1: Try creating a temporary link element (works better in Brave)
+        const link = document.createElement('a');
+        link.href = url;
+        link.style.display = 'none';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } catch (error) {
+        // Fallback: Direct window.location
+        window.location.href = url;
+      }
     } else {
       // For other social links, open in new tab
       window.open(url, '_blank', 'noopener,noreferrer');
